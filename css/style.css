@@ -1,0 +1,359 @@
+/* Fonts for the page */
+@font-face {
+    font-family: "SegoeUILight";
+    src: url('../fonts/segoeuil.ttf') format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SegoeUI";
+    src: url('../fonts/segoeui.ttf') format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Styles Reset */
+html, body, div, span, h1, p, a, img, article, figure, figcaption, header, section {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Set flex */
+header, main, figure, section, .amount, .amount button {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    box-sizing: border-box;
+    border-width: 5px 0 3px 0;
+    border-style: solid;
+    border-image: url("../img/border.png") 5 0 3 0 round;
+    -webkit-border-image: url("../img/border.png") 5 0 3 0 round;
+    font-family: 'SegoeUILight', sans-serif;
+}
+
+header {
+    height: 135px;
+    width: 100%;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    background: white;
+    transition: 0.5s linear all;
+    -webkit-transition: 0.5s linear all;
+}
+
+/*Custom back-button - hidden by default*/
+a#backbutton {
+    display: none;
+    position: absolute;
+    top: calc(50% - 21px);
+    margin: 0 39px;
+}
+
+header h1 {
+    padding-left: 120px;
+    margin-top: -10px;
+    font-size: 39.5pt;
+    font-weight: normal;
+    transition: 0.5s linear all;
+    -webkit-transition: 0.5s linear all;
+}
+
+/*Cart's styles*/
+header div {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+
+    width: 280px;
+    height: 60px;
+    margin: -5px 46px 0 33px;
+    padding-right: 28px;
+    box-sizing: border-box;
+
+    background: #d9644a url("../img/cart.png") center left 20px no-repeat;
+    font-family: 'SegoeUI', sans-serif;
+    font-size: 20pt;
+    color: white;
+
+    transition: 0.5s linear all;
+    -webkit-transition: 0.5s linear all;
+}
+
+main {
+    position: relative;
+    height: calc(100% - 125px);
+    width: auto;
+    top: 125px;
+    margin-left: 120px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: 0.5s linear all;
+    -webkit-transition: 0.5s linear all;
+    tab-index: 0;
+}
+
+section {
+    height: 570px;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    min-width: 240px;   /*for Safari users*/
+}
+
+section.big-section {
+    min-width: 370px;   /* for Safari users */
+}
+
+
+section.row {
+    min-width: 480px;
+	width: 480px;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+}
+
+section.products {
+    height: 474px;
+    min-width: 374px;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+figure {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    position: relative;
+    margin: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+figure img {
+    width: auto;
+    transition: 0.4s all linear;
+    -webkit-transition: 0.4s all linear;
+}
+
+section.row img {
+    width: auto;
+}
+
+figure:hover img {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+section.products figure {
+    width: 360px;
+    border: 2px solid transparent;
+    transition: 0.2s all linear;
+    -webkit-transition: 0.2s all linear;
+}
+
+section.products figure:hover img {
+    transform: none;
+    -webkit-transform: none;
+}
+
+section.products:hover figure {
+    border: 2px solid #d9644a;
+    border-radius: 3px;
+}
+
+figcaption {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 0;
+    padding-left: 20px;
+    background: white;
+    font-family: 'SegoeUI', sans-serif;
+    font-size: 16pt;
+    color: #010101;
+    opacity: 0.8;
+    line-height: 40px;
+}
+
+section.products figcaption {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    bottom: 0;
+    padding-right: 20px;
+    opacity: 1;
+    background: rgba(255,255,255,0.8);
+}
+
+section.products figcaption span:first-child {
+    opacity: 0.8;
+}
+
+section.products figcaption span:last-child {
+    opacity: 1;
+    color: #d9644a;
+    font-family: 'SegoeUI', sans-serif;
+    font-size: 24pt;
+}
+
+.amount {
+    position: relative;
+    width: 360px;
+    height: 80px;
+    margin-left: 2px;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center;
+    background: #4ea686;
+}
+
+.amount button {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    padding: 0;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: 'SegoeUILight', sans-serif;
+    font-size: 28pt;
+    justify-content: center;
+    -webkit-justify-content: center;
+    text-align: center;
+    outline: none;
+    user-select: none;
+    user-focus: none;
+    cursor: pointer;
+}
+
+.amount button span {
+    width: 100%;
+    text-align: center;
+    line-height: 26px;
+    padding-bottom: 8px;
+}
+
+.amount button:hover {
+    background: #4D9A7B;
+}
+
+.amount button:active {
+    background: #50B594;
+}
+
+.amount label {
+    width: 60px;
+    text-align: center;
+}
+
+.amount label span {
+    font-family: 'SegoeUILight', sans-serif;
+    font-size: 11pt;
+    color: white;
+    opacity: 0.8;
+}
+
+.amount input {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    text-align: center;
+    font-family: SegoeUI, sans-serif;
+    font-size: 24pt;
+    color: white;
+}
+
+/* Media queries for Header height and H1 font size */
+
+@media only screen and (max-height: 725px) {
+    header {
+        height: 70px;
+    }
+
+	header div {
+		height: 50px;
+	}
+
+	header h1 {
+		font-size: 36pt;
+	}
+
+    main {
+        top: 60px;
+        height: calc(100% - 60px);
+    }
+}
+
+@media only screen and (max-width: 1365px) {
+    header h1 {
+        font-size: 36pt;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    header h1 {
+        font-size: 32pt;
+    }
+}
+
+@media only screen and (max-width: 1220px) {
+    header h1 {
+        font-size: 30pt;
+    }
+}
+
+@media only screen and (max-width: 1170px) {
+    header h1 {
+        font-size: 28pt;
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+    header h1 {
+        font-size: 26pt;
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    header h1 {
+        font-size: 24pt;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    header h1 {
+        font-size: 22pt;
+        font-family: 'SegoeUI', sans-serif;
+    }
+}
