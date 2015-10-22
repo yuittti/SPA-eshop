@@ -10,4 +10,6 @@ The events handlers are set with "delegate" method which gives possibility to se
 
 At the moment works with limited functionality - the cart saves during session only the quantity of chosen products and the total price of all chosen products.
 
+Designed for the minimum size screen 960px, tested on webkit browsers and Mozilla.
+
 [**Live demo**](http://yuittti.github.io/single-page-shop/)
